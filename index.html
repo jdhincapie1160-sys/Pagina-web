@@ -3,119 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investigación: Operadores en JavaScript</title>
-    
+    <title>Tienda Urban & Tarea Algoritmos</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f0f2f5;
-            margin: 0;
-            padding: 20px;
-        }
-        header {
-            background: #2c3e50;
-            color: white;
-            padding: 2rem;
-            text-align: center;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-        }
-        section {
-            background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        h2 {
-            color: #2980b9;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            background: #f9f9f9;
-            margin: 10px 0;
-            padding: 10px;
-            border-left: 5px solid #2980b9;
-        }
-        code {
-            background: #e74c3c;
-            color: white;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: monospace;
-        }
-        footer {
-            text-align: center;
-            font-size: 0.9rem;
-            color: #777;
-            margin-top: 40px;
-        }
+        /* ESTILOS DE LA TIENDA */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f0f2f5; color: #333; }
+        
+        header { background-color: #1a1a1a; color: white; padding: 40px 20px; text-align: center; }
+        header h1 { margin: 0; font-size: 2.8rem; letter-spacing: 4px; text-transform: uppercase; }
+
+        .catalogo { padding: 50px 20px; max-width: 1100px; margin: auto; text-align: center; }
+        .grid-productos { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; }
+        
+        .producto { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .producto:hover { transform: translateY(-5px); }
+        .producto h3 { font-size: 1.1rem; margin: 15px 0 5px; }
+        .precio { color: #e74c3c; font-weight: bold; font-size: 1.3rem; display: block; margin-bottom: 15px; }
+        .btn-comprar { background: #1a1a1a; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-size: 0.9rem; }
+
+        /* ESTILOS DE LA INVESTIGACIÓN (COMO TU FOTO) */
+        .seccion-algoritmos { background-color: #2c3e50; padding: 80px 20px; } 
+        .contenedor-blanco { background: white; max-width: 850px; margin: auto; padding: 45px; border-radius: 15px; box-shadow: 0 15px 40px rgba(0,0,0,0.4); }
+        
+        .titulo-investigacion { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 15px; margin-bottom: 25px; font-size: 2rem; }
+        .materia { color: #3498db; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Estilo de línea azul vertical de tu foto */
+        .bloque-op { border-left: 6px solid #3498db; padding-left: 25px; margin-bottom: 40px; }
+        .bloque-op h3 { color: #2980b9; font-size: 1.5rem; margin-top: 0; }
+        .subtitulo-op { color: #666; font-style: italic; margin-bottom: 15px; }
+        
+        .item-investigacion { margin: 12px 0; line-height: 1.6; list-style: none; }
+
+        /* Los botones rojos de tu foto */
+        .badge-simbolo { background-color: #c0392b; color: white; padding: 3px 10px; border-radius: 5px; font-family: monospace; font-weight: bold; margin: 0 5px; }
+        .badge-ejemplo { background-color: #e74c3c; color: white; padding: 3px 12px; border-radius: 5px; font-family: monospace; margin-left: 8px; font-size: 0.95rem; }
+
+        footer { background: #111; color: #555; text-align: center; padding: 30px; }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <h1>Investigación de JavaScript</h1>
-            <p>Operadores Fundamentales del Lenguaje</p>
-        </header>
+    <header>
+        <h1>Urban Horizon</h1>
+        <p>Premium Streetwear Collection</p>
+    </header>
 
-        <section>
-            <h2>1. Operadores Aritméticos</h2>
-            <p>Se usan para realizar cálculos matemáticos básicos.</p>
-            <ul>
-                <li><strong>Suma (<code>+</code>):</strong> Suma dos valores. Ejemplo: <code>5 + 2 = 7</code></li>
-                <li><strong>Resta (<code>-</code>):</strong> Resta el operando derecho del izquierdo. Ejemplo: <code>10 - 4 = 6</code></li>
-                <li><strong>Multiplicación (<code>*</code>):</strong> Multiplica ambos valores. Ejemplo: <code>3 * 4 = 12</code></li>
-                <li><strong>División (<code>/</code>):</strong> Divide el primer valor por el segundo. Ejemplo: <code>20 / 5 = 4</code></li>
-                <li><strong>Módulo (<code>%</code>):</strong> Devuelve el resto de una división. Ejemplo: <code>10 % 3 = 1</code></li>
-            </ul>
-        </section>
+    <section class="catalogo">
+        <div class="grid-productos">
+            <div class="producto">
+                <h3>Camiseta Básica</h3>
+                <span class="precio">$25.00</span>
+                <a href="#" class="btn-comprar">Comprar ahora</a>
+            </div>
+            <div class="producto">
+                <h3>Pantalón Denim</h3>
+                <span class="precio">$55.00</span>
+                <a href="#" class="btn-comprar">Comprar ahora</a>
+            </div>
+            <div class="producto">
+                <h3>Chaqueta Cuero</h3>
+                <span class="precio">$120.00</span>
+                <a href="#" class="btn-comprar">Comprar ahora</a>
+            </div>
+            <div class="producto">
+                <h3>Gorra Deportiva</h3>
+                <span class="precio">$18.00</span>
+                <a href="#" class="btn-comprar">Comprar ahora</a>
+            </div>
+            <div class="producto">
+                <h3>Zapatillas Urban</h3>
+                <span class="precio">$75.00</span>
+                <a href="#" class="btn-comprar">Comprar ahora</a>
+            </div>
+        </div>
+    </section>
 
-        <section>
-            <h2>2. Operadores de Asignación</h2>
-            <p>Permiten asignar valores a las variables de forma eficiente.</p>
-            <ul>
-                <li><strong>Asignación Simple (<code>=</code>):</strong> Asigna un valor. Ejemplo: <code>let x = 10;</code></li>
-                <li><strong>Asignación de Suma (<code>+=</code>):</strong> Suma y asigna. Ejemplo: <code>x += 5</code> (es igual a x = x + 5)</li>
-                <li><strong>Asignación de Resta (<code>-=</code>):</strong> Resta y asigna. Ejemplo: <code>x -= 2</code></li>
-            </ul>
-        </section>
+    <section class="seccion-algoritmos">
+        <div class="contenedor-blanco">
+            <p class="materia">Materia: Algoritmos</p>
+            <h2 class="titulo-investigacion">Investigación Académica: JavaScript</h2>
+            
+            <div class="bloque-op">
+                <h3>1. Operadores Aritméticos</h3>
+                <p class="subtitulo-op">Se usan para realizar cálculos matemáticos básicos.</p>
+                <div class="item-investigacion"><strong>Suma (<span class="badge-simbolo">+</span>):</strong> Suma dos valores. Ejemplo: <span class="badge-ejemplo">5 + 2 = 7</span></div>
+                <div class="item-investigacion"><strong>Resta (<span class="badge-simbolo">-</span>):</strong> Resta el operando derecho del izquierdo. Ejemplo: <span class="badge-ejemplo">10 - 4 = 6</span></div>
+                <div class="item-investigacion"><strong>Multiplicación (<span class="badge-simbolo">*</span>):</strong> Multiplica ambos valores. Ejemplo: <span class="badge-ejemplo">3 * 4 = 12</span></div>
+                <div class="item-investigacion"><strong>División (<span class="badge-simbolo">/</span>):</strong> Divide el primer valor por el segundo. Ejemplo: <span class="badge-ejemplo">20 / 5 = 4</span></div>
+                <div class="item-investigacion"><strong>Módulo (<span class="badge-simbolo">%</span>):</strong> Devuelve el resto de una división. Ejemplo: <span class="badge-ejemplo">10 % 3 = 1</span></div>
+            </div>
 
-        <section>
-            <h2>3. Operadores Lógicos</h2>
-            <p>Se utilizan para tomar decisiones basadas en condiciones booleanas.</p>
-            <ul>
-                <li><strong>AND Lógico (<code>&&</code>):</strong> Es verdadero si ambas condiciones son ciertas.</li>
-                <li><strong>OR Lógico (<code>||</code>):</strong> Es verdadero si al menos una condición es cierta.</li>
-                <li><strong>NOT Lógico (<code>!</code>):</strong> Invierte el valor (de verdadero a falso y viceversa).</li>
-            </ul>
-        </section>
+            <div class="bloque-op">
+                <h3>2. Operadores de Asignación</h3>
+                <p class="subtitulo-op">Permiten asignar valores a las variables de forma eficiente.</p>
+                <div class="item-investigacion"><strong>Asignación Simple (<span class="badge-simbolo">=</span>):</strong> Asigna un valor. Ejemplo: <span class="badge-ejemplo">let x = 10;</span></div>
+                <div class="item-investigacion"><strong>Asignación de Suma (<span class="badge-simbolo">+=</span>):</strong> Suma y asigna. Ejemplo: <span class="badge-ejemplo">x += 5 (es igual a x = x + 5)</span></div>
+                <div class="item-investigacion"><strong>Asignación de Resta (<span class="badge-simbolo">-=</span>):</strong> Resta y asigna. Ejemplo: <span class="badge-ejemplo">x -= 2</span></div>
+            </div>
 
-        <section>
-            <h2>4. Operadores de Comparación</h2>
-            <ul>
-                <li><strong>Igualdad estricta (<code>===</code>):</strong> Compara valor y tipo de dato.</li>
-                <li><strong>Diferente de (<code>!=</code>):</strong> Compara si los valores no son iguales.</li>
-                <li><strong>Mayor que (<code>></code>) y Menor que (<code><</code>):</strong> Comparaciones numéricas.</li>
-            </ul>
-        </section>
+            <div class="bloque-op">
+                <h3>3. Operadores Lógicos</h3>
+                <p class="subtitulo-op">Se utilizan para tomar decisiones basadas en condiciones booleanas.</p>
+                <div class="item-investigacion"><strong>AND Gate (<span class="badge-simbolo">&&</span>):</strong> Es verdadero si ambas condiciones son ciertas.</div>
+                <div class="item-investigacion"><strong>OR Gate (<span class="badge-simbolo">||</span>):</strong> Es verdadero si al menos una condición es cierta.</div>
+                <div class="item-investigacion"><strong>NOT Gate (<span class="badge-simbolo">!</span>):</strong> Invierte el valor (de verdadero a falso y viceversa).</div>
+            </div>
 
-        <footer>
-            <p>Proyecto de Control de Versiones con Git y GitHub</p>
-        </footer>
-    </div>
+            <div class="bloque-op">
+                <h3>4. Operadores de Comparación</h3>
+                <div class="item-investigacion"><strong>Igualdad estricta (<span class="badge-simbolo">===</span>):</strong> Compara valor y tipo de dato.</div>
+                <div class="item-investigacion"><strong>Diferente de (<span class="badge-simbolo">!=</span>):</strong> Compara si los valores no son iguales.</div>
+                <div class="item-investigacion"><strong>Mayor que (<span class="badge-simbolo">></span>) y Menor que (<span class="badge-simbolo"><</span>):</strong> Comparaciones numéricas.</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Taller - Materia: Algoritmos | Estudiante: Juan David Hincapié</p>
+    </footer>
 
 </body>
 </html>
